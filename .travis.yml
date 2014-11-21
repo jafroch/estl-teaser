@@ -16,8 +16,8 @@ install:
 script:
 - cmake --version
 - bii init estl-teaser
-- mkdir -p ./estl-teaser/blocks/jafroch/cppestl-teaser
-- mv !(estl-teaser) ./estl-teaser/blocks/jafroch/cppestl-teaser
+- mkdir -p ./estl-teaser/blocks/jafroch/estl-teaser
+- mv !(estl-teaser) ./estl-teaser/blocks/jafroch/estl-teaser
 - cd estl-teaser
 - bii find -um
 - bii cpp:build
