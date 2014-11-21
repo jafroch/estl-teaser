@@ -13,6 +13,8 @@ class MyClass
 {
 public:
 
+
+
     MyClass();
 
     void fillVec(esrlabs::estd::vector<int>& aVec, size_t count) const;
