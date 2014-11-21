@@ -6,7 +6,7 @@ before_install:
 install:
 - wget http://www.biicode.com/downloads/latest/ubuntu64
 - mv ubuntu64 bii-ubuntu64.deb
-- (sudo dpkg -i bii-ubuntu64.deb) && sudo apt-get -f install
+- "(sudo dpkg -i bii-ubuntu64.deb) && sudo apt-get -f install"
 - rm bii-ubuntu64.deb
 - wget https://s3.amazonaws.com/biibinaries/thirdparty/cmake-3.0.2-Linux-64.tar.gz
 - tar -xzf cmake-3.0.2-Linux-64.tar.gz
@@ -22,13 +22,13 @@ script:
 - bii find -um
 - bii cpp:build
 - cd bin
-- ./jafroch_estl-teaser_examples_estd_vector1
-- ./jafroch_estl-teaser_examples_estd_vector2
-- ./jafroch_estl-teaser_examples_estd_vector3
-
+- "./jafroch_estl-teaser_examples_estd_vector1"
+- "./jafroch_estl-teaser_examples_estd_vector2"
+- "./jafroch_estl-teaser_examples_estd_vector3"
 after_success:
 - bii user jafroch -p $BII_JAFROCH_PASSWORD
 - bii publish
 env:
   global:
-    secure: M+/Hjhv5M0+MyXhTCLYUWJje4r6I8rYohUhpgjH9nODJUuC10rAokWg6L8f3Z8haaNyfFoNVYLeA1kAKtemlBJK4Mqf7Z9W92URLfL/U8xwoWzwudH2EvjUQPX8Um7Xgu5e4arHjsuQ1mzL9ghg8O6SENS4YrGZX3QfKptVEAuw=
+  - secure: M+/Hjhv5M0+MyXhTCLYUWJje4r6I8rYohUhpgjH9nODJUuC10rAokWg6L8f3Z8haaNyfFoNVYLeA1kAKtemlBJK4Mqf7Z9W92URLfL/U8xwoWzwudH2EvjUQPX8Um7Xgu5e4arHjsuQ1mzL9ghg8O6SENS4YrGZX3QfKptVEAuw=
+  - secure: gQzkjEzxgglRYezKd4Ii+1uwsUHjyZy/IdZatIy7aSBTiMOThZKja0xujtYQ7RLeMNkf2dupX9qHacs9+C7+Z2/nAd8xB6mTzEsT4dQIQGlAr7W99C0CxAxCGEzZNMaSzsyI1/6JfxARmIyJIX+eT7Qor1sC/kg4wJmZulvfNAc=
