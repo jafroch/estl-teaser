@@ -9,6 +9,7 @@
 
 #include <iterator>
 
+#include <algorithm>
 #include <estd/uncopyable.h>
 #include <estd/nullptr.h>
 #include <estd/assert.h>
